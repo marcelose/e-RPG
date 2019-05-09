@@ -1,3 +1,19 @@
+/*navbar*/
+header{
+	height: 56px;
+}
+
+/*carousel*/
+.carousel{
+	height: 580px;
+}
+.img-carousel{
+	height: 580px;
+	background-size: cover;
+	background-position: center;
+}
+
+/*footer*/
 footer{
 	background-color: gray;
 	text-align: center;
