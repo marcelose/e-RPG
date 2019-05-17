@@ -5,11 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Cadastro</title>
 		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../documents/css/style.css">
 		<style type="text/css">
-			body{
-				background-image: url(../img/img-2.jpg);
-			}
+			body{ background-image: url(../documents/img/img-2.jpg); }
+			span.text-danger{ font-size: 14px; }
 		</style>
 	</head>
 	<body>
@@ -38,10 +37,10 @@
 						</li>
 					</ul>
 					<form class="form-inline mt-2 mt-md-0">
-						<input class="form-control form-control-sm mr-sm-2" type="text" placeholder="Email">
-						<input class="form-control form-control-sm mr-sm-2 my-2" type="password" placeholder="Senha">
-						<button class="btn btn-outline-success btn-sm mr-2" type="button">Entrar</button>
-						<a class="text-success text-decoration-none" href="cadastro.html">Cadastre-se</a>
+						<input class="form-control form-control-sm mr-sm-2" id="login_email" type="text" placeholder="Email">
+						<input class="form-control form-control-sm mr-sm-2 my-2" id="login_senha" type="password" placeholder="Senha">
+						<button class="btn btn-outline-success btn-sm mr-2" type="button" onclick="logar()">Entrar</button>
+						<a class="text-success text-decoration-none" href="pages/cadastro.html">Cadastre-se</a>
 					</form>
 				</div>
 				<!-- FIM Hamburguer responsivo -->
@@ -58,36 +57,41 @@
 							<hr class="mx-5">
 							<form>
 								<div class="form-group">
-									<label for="nome">Nome:</label>
-									<input class="form-control" type="text" id="nome" placeholder="Digite seu nome...">
+									<label for="nome">Nome:<span class="text-danger">*</span></label>
+									<input class="form-control" type="text" id="cadastro_nome" placeholder="Digite seu nome...">
+									<span id="alert_nome" class="mt-2 text-danger"></span>
 								</div>
 								<div class="form-group">
-									<label for="email">Email:</label>
-									<input class="form-control" type="email" id="email" placeholder="Digite seu email...">
+									<label for="email">Email:<span class="text-danger">*</span></label>
+									<input class="form-control" type="email" id="cadastro_email" placeholder="Digite seu email...">
+									<span id="alert_email" class="mt-2 text-danger"></span>
 								</div>
 								<div class="form-group">
 									<p>Sexo:</p>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" id="sexo_m" value="m">
+										<input class="form-check-input" type="radio" id="sexo_m" name="cadastro_sexo" value="m">
 										<label class="form-check-label" for="sexo_m">Masculino</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" id="sexo_f" value="f">
+										<input class="form-check-input" type="radio" id="sexo_f" name="cadastro_sexo" value="f">
 										<label class="form-check-label" for="sexo_f">Feminino</label>
 									</div>
 								</div>
 								<div class="form-row">
 									<div class="form-group col-md-6">
-										<label for="senha">Senha:</label>
-										<input class="form-control" type="password" id="senha" placeholder="Digite sua senha...">
+										<label for="senha">Senha:<span class="text-danger">*</span></label>
+										<input class="form-control" type="password" id="cadastro_senha" placeholder="Digite sua senha...">
+										<span id="alert_senha" class="mt-2 text-danger"></span>
 									</div>
 									<div class="form-group col-md-6">
-										<label for="senha">Confirmar senha:</label>
-										<input class="form-control" type="password" id="senha" placeholder="Confirme sua senha...">
+										<label for="senha">Confirmar senha:<span class="text-danger">*</span></label>
+										<input class="form-control" type="password" id="cadastro_confirmar_senha" placeholder="Confirme sua senha...">
+										<span id="alert_confirmar_senha" class="mt-2 text-danger"></span>
 									</div>
 								</div>
-								<button class="btn btn-outline-success d-block m-auto" type="button">Cadastrar</button>
+								<button class="btn btn-outline-success d-block m-auto" type="button" onclick="cadastrar()">Cadastrar</button>
 							</form>
+							<div class="text-center text-danger mt-2" style="font-size: 13px;">Campos com * são obrigatorios!</div>
 						</div>
 					</div>
 				</div>
@@ -99,4 +103,5 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../documents/js/validacao.js"></script>
 </html>

@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>e-RPG</title>
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="documents/css/style.css">
 	</head>
 	<body>
 
@@ -33,9 +33,9 @@
 						</li>
 					</ul>
 					<form class="form-inline mt-2 mt-md-0">
-						<input class="form-control form-control-sm mr-sm-2" type="text" placeholder="Email">
-						<input class="form-control form-control-sm mr-sm-2 my-2" type="password" placeholder="Senha">
-						<button class="btn btn-outline-success btn-sm mr-2" type="button">Entrar</button>
+						<input class="form-control form-control-sm mr-sm-2" id="login_email" type="text" placeholder="Email">
+						<input class="form-control form-control-sm mr-sm-2 my-2" id="login_senha" type="password" placeholder="Senha">
+						<button class="btn btn-outline-success btn-sm mr-2" type="button" onclick="logar()">Entrar</button>
 						<a class="text-success text-decoration-none" href="pages/cadastro.html">Cadastre-se</a>
 					</form>
 				</div>
@@ -54,13 +54,13 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<div class="d-block img-carousel" style="background-image: url(img/img-1.jpg)"></div>
+						<div class="d-block img-carousel" style="background-image: url(documents/img/img-1.jpg)"></div>
 					</div>
 					<div class="carousel-item">
-						<div class="d-block img-carousel" style="background-image: url(img/img-3.jpg)"></div>
+						<div class="d-block img-carousel" style="background-image: url(documents/img/img-3.jpg)"></div>
 					</div>
 					<div class="carousel-item">
-						<div class="d-block img-carousel" style="background-image: url(img/img-6.jpg)"></div>
+						<div class="d-block img-carousel" style="background-image: url(documents/img/img-6.jpg)"></div>
 					</div>
 				</div>
 				<!-- Controladores do carroseul -->
@@ -77,31 +77,31 @@
 
 			<div class="container">
 				<!-- Sobre -->
-				<div class="display-4 text-center mb-4" id="sobre">Sobre</div>
+				<div class="h1 font-weight-light text-center mb-4" id="sobre">Sobre</div>
 				<hr class="mx-5">
 				<div class="row my-5 align-items-center">
-					<div class="col-sm-7">
+					<div class="col-md-7">
 						<h2>O e-RPG. <span class="text-muted">Banco de personagem.</span></h2>
 						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 						consequat.</p>
 					</div>
-					<div class="col-sm-5">
-						<img class="d-block m-auto w-50 rounded" src="img/paisagem-1.jpg">
+					<div class="col-md-5">
+						<img class="d-block m-auto w-50 rounded" src="documents/img/paisagem-1.jpg">
 					</div>
 				</div>
 				<!-- FIM Sobre -->
 
 				<!-- Desenvolvedores -->
-				<div class="display-4 text-center mb-4" id="desenvolvedores">Desenvolvedor</div>
+				<div class="h1 font-weight-lights text-center mb-4" id="desenvolvedores">Desenvolvedor</div>
 				<hr class="mx-5">
 				<div class="row justify-content-center my-5">
-					<div class="col-4 mb-5">
+					<div class="col-lg-5 col-md-8 col-12 mb-5">
 						<div class="card shadow-sm">
 							<div class="card-body">
 								<div class="rounded-circle overflow-hidden m-auto" style="width: 150px; height: 150px; margin-bottom: 10px">
-									<img class="img-fluid" src="img/marcelo.jpg">
+									<img class="img-fluid" src="documents/img/marcelo.jpg">
 								</div>
 								<p class="text-center my-4">
 									<b>Marcelo Antony Aguiar da Costa</b><br>
@@ -125,4 +125,5 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="documents/js/validacao.js"></script>
 </html>
