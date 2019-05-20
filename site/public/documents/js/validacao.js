@@ -5,7 +5,8 @@ function logar() {
 	if (email.value == 'rpg') {
 		email.classList.remove("border-danger","text-danger");
 		if (senha.value == '123') {
-			location.href="file:///C:/Users/leloa/Documents/Site/e-RPG/site/public/pages/home.html";
+            alert("foi")
+			location.href="/users";
 		} else {
 			senha.classList.add("border-danger");
 			alert('Senha incorreta.');
